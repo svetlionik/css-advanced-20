@@ -1,0 +1,51 @@
+html {
+    font-size: var(--font-size);
+    font-family: var(--font-family);
+    line-height: var(--font-line-height);
+}
+
+body, form, input, textarea, option, select, button {
+    font: inherit;
+}
+
+p, ul, ol {
+    padding-bottom: 1.5em;
+}
+
+ul, ol {
+    padding-left: 2.5em;
+}
+
+blockquote,
+h1, h2, h3, h4, h5, h6 {
+    font-family: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    padding-bottom: 0.5rem;
+    padding-top: 1.5rem;
+    font-weight: normal;
+}
+
+h1 { font-size: 200%; }
+h2 { font-size: 180%; }
+h3 { font-size: 160%; }
+h4 { font-size: 140%; }
+h5 { font-size: 120%; }
+h6 { font-size: 100%; }
+
+blockquote {
+    padding: 0 2.5em;
+    border-left: 2px solid #000;
+    margin-bottom: 1.5em;
+}
+
+blockquote p {
+    font-style: italic;
+    /* padding: 0; */
+}
+
+blockquote p:last-child {
+    padding-bottom: 0;
+}
+

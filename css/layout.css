@@ -1,0 +1,11 @@
+
+
+.site {
+    max-width: var(--site-max-width);
+    margin: 0 auto;
+    background: #ddd;
+    padding: 2em;
+}
+.site-content {
+    padding: 20px;
+}

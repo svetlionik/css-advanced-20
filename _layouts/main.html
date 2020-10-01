@@ -1,34 +1,31 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{site.title}}</title>
+  <link rel="stylesheet" href="{{ site.baseurl }}/css/site.css">
+</head>
+<body>
+  
+  <div class="site">
+        <div class="header">
+        <nav class="site-nav">
+          <ul>
+        {% for pages in site.pages %}
+          {% if pages.title %}
+            <li><a href="{{ site.baseurl }}{{ pages.url }}" {% if page.name == pages.name %}class="active"{% endif %}>{{ pages.title }}</a></li>
+          {% endif%}
+        {% endfor %}
+        </ul>
+        </nav>
+      </div>
+      <h1>{{ page.title}}</h1>
+      <h2>{{ page.description}}</h2>
+      <hr>
 
-<div class="home">
-  {%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
-  {%- endif -%}
-
-  {{ content }}
-
-  {%- if site.posts.size > 0 -%}
-    <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
-    <ul class="post-list">
-      {%- for post in site.posts -%}
-      <li>
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
-        <h3>
-          <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
-          </a>
-        </h3>
-        {%- if site.show_excerpts -%}
-          {{ post.excerpt }}
-        {%- endif -%}
-      </li>
-      {%- endfor -%}
-    </ul>
-
-    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
-  {%- endif -%}
+  <div class="site-content">{{content}}</div>
 
 </div>
+</body>
+</html>
